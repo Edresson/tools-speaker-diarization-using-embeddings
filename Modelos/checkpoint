@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/edresson/Pti-embbending/Encoder-MFCC/Automatizado/Modelos/encoder.tflearn"
+all_model_checkpoint_paths: "/home/edresson/Pti-embbending/Encoder-MFCC/Automatizado/Modelos/encoder.tflearn"
