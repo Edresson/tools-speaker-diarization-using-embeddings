@@ -1,0 +1,680 @@
+'''tensorboard model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir="logs")'''
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.008,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=556,shuffle=True, show_metric=False)
+acertou : 0.86
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.001,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=556,shuffle=True, show_metric=False)
+ACERTO: 0.8774193548387097
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.001,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=456,shuffle=True, show_metric=False)
+acertou:  537 de:  620
+0.8661290322580645
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.001,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=656,shuffle=True, show_metric=False)
+acertou:  510 de:  620
+0.8225806451612904
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.001,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=556,shuffle=True, show_metric=False)
+acertou:  529 de:  620
+0.853225806451613
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.005,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=556,shuffle=True, show_metric=False)
+acertou:  537 de:  620
+0.8661290322580645
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.005,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  546 de:  620
+0.8806451612903226
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.7)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  553 de:  620
+0.8919354838709678
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.6)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  552 de:  620
+0.8903225806451613
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  558 de:  620
+0.9
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.3)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  551 de:  620
+0.8887096774193548
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.5)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  556 de:  620
+0.896774193548387
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.005,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  553 de:  620
+0.8919354838709678
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  551 de:  620
+0.8887096774193548
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir="logs")
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  561 de:  620
+0.9048387096774193
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1472,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  560 de:  620
+0.9032258064516129
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=1473,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  557 de:  620
+0.8983870967741936
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)
+model.fit(X, Y, n_epoch=2500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  556 de:  620
+0.896774193548387
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+#encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir="logs1")
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  538 de:  620
+0.867741935483871
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="logsl2edp")
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  559 de:  620
+0.9016129032258065
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="logsl2edp2000epoch08")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  555 de:  620
+0.8951612903225806 ,loss:-335022.18750 menor loss:−335550
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="logsl2edp2500epoch08")
+model.fit(X, Y, n_epoch=2500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  546 de:  620
+0.8806451612903226,loss: −335660 menor loss:−337170
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.4)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="logsl2edp222")
+model.fit(X, Y, n_epoch=1500,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+acertou:  540 de:  620
+0.8709677419354839, loss: -323120
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="logsl2edp2000epoch08")
+acertou:  559 de:  620
+0.9016129032258065
+
+## Final regreção ##
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Resultados:
+
+Base1(Locutores conhecidos):
+acertou:  1603 de:  1733
+0.9249855741488748
+
+Base2(Locutores não conhecidos portugues:
+acertou:  557 de:  620
+0.8983870967741936
+
+Base3(Locutores Librespeech):
+acertou:  6260 de:  7887
+0.793711170280208
+
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='relu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+
+
+Base2(Locutores não conhecidos portugues:
+acertou:  318 de:  620
+0.5129032258064516
+1733 30
+620 10
+Base1(Locutores conhecidos):
+acertou:  1071 de:  1733
+0.61800346220427
+Base3(Locutores Librespeech):
+acertou:  3083 de:  7887
+0.3908964118169139
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='elu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  249 de:  620
+0.40161290322580645
+Base1(Locutores conhecidos):
+acertou:  1340 de:  1733
+0.7732256203115984
+Base3(Locutores Librespeech):
+acertou:  2891 de:  7887
+0.36655255483707366
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='prelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  358 de:  620
+0.5774193548387097
+Base1(Locutores conhecidos):
+acertou:  1723 de:  1733
+0.9942296595499135
+Base3(Locutores Librespeech):
+acertou:  5225 de:  7887
+0.6624825662482566
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='leaky_relu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  458 de:  620
+0.7387096774193549
+Base1(Locutores conhecidos):
+acertou:  1723 de:  1733
+0.9942296595499135
+Base3(Locutores Librespeech):
+acertou:  5567 de:  7887
+0.705845061493597
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='leaky_relu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.001,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  433 de:  620
+0.6983870967741935
+Base1(Locutores conhecidos):
+acertou:  1689 de:  1733
+0.9746105020196192
+Base3(Locutores Librespeech):
+acertou:  5708 de:  7887
+0.7237225814631673
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='leaky_relu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+Base2(Locutores não conhecidos portugues:
+acertou:  103 de:  620
+0.16612903225806452
+Base1(Locutores conhecidos):
+acertou:  212 de:  1733
+0.12233121754183497
+Base3(Locutores Librespeech):
+acertou:  1423 de:  7887
+0.1804234816787118
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.008,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+Base2(Locutores não conhecidos portugues:
+acertou:  555 de:  620
+0.8951612903225806
+Base1(Locutores conhecidos):
+acertou:  1608 de:  1733
+0.927870744373918
+Base3(Locutores Librespeech):
+acertou:  6251 de:  7887
+0.7925700519842779
+
+
+
+
+
+
+
+
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder,160,activation='crelu',regularizer='L2')  
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')
+decoder = tflearn.fully_connected(encoder,160,activation='crelu',regularizer='L2')  
+
+decoder = tflearn.fully_connected(decoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+
+Base2(Locutores não conhecidos portugues:
+acertou:  507 de:  620
+0.817741935483871
+Base1(Locutores conhecidos):
+acertou:  1708 de:  1733
+0.9855741488747836
+Base3(Locutores Librespeech):
+acertou:  5813 de:  7887
+0.7370356282490174
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+#encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder,160,activation='relu',regularizer='L2')  
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')
+decoder = tflearn.fully_connected(encoder,160,activation='relu',regularizer='L2')  
+
+decoder = tflearn.fully_connected(decoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+Base2(Locutores não conhecidos portugues:
+acertou:  196 de:  620
+0.3161290322580645
+Base1(Locutores conhecidos):
+acertou:  775 de:  1733
+0.447201384881708
+Base3(Locutores Librespeech):
+acertou:  1683 de:  7887
+0.21338912133891214
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.9)
+encoder = tflearn.fully_connected(encoder,160,activation='relu',regularizer='L2')  
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')
+decoder = tflearn.fully_connected(encoder,160,activation='relu',regularizer='L2')  
+
+decoder = tflearn.fully_connected(decoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+model = tflearn.DNN(net)#, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  490 de:  620
+0.7903225806451613
+Base1(Locutores conhecidos):
+acertou:  1637 de:  1733
+0.944604731679169
+Base3(Locutores Librespeech):
+acertou:  4502 de:  7887
+0.5708127298085457
+
+
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.9)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  553 de:  620
+0.8919354838709678
+Base1(Locutores conhecidos):
+acertou:  482 de:  534
+0.9026217228464419
+Base3(Locutores Librespeech):
+acertou:  6171 de:  7887
+0.7824267782426778
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+Base2(Locutores não conhecidos portugues:
+acertou:  548 de:  620
+0.8838709677419355
+Base1(Locutores conhecidos):
+acertou:  481 de:  534
+0.900749063670412
+Base3(Locutores Librespeech):
+acertou:  6425 de:  7887
+0.8146316723722582
+
+
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='linear',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+Base2(Locutores não conhecidos portugues:
+acertou:  98 de:  620
+0.15806451612903225
+Base1(Locutores conhecidos):
+acertou:  79 de:  534
+0.14794007490636704
+Base3(Locutores Librespeech):
+acertou:  1329 de:  7887
+0.1685051350323317
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.004,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=95,shuffle=True, show_metric=False)
+Base2(Locutores não conhecidos portugues:
+acertou:  557 de:  620
+0.8983870967741936
+Base1(Locutores conhecidos):
+acertou:  482 de:  534
+0.9026217228464419
+Base3(Locutores Librespeech):
+acertou:  6341 de:  7887
+0.8039812349435781
+
+
+
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric='R2')#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net)#, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder2", batch_size=95,shuffle=True, show_metric=False)
+
+
+
+'''Melhor'''
+#22k  encoder1.py
+encoder = tflearn.input_data(shape=[None, 13,int(n_Entrada_taxa)])
+encoder = tflearn.dropout(encoder,0.8)
+encoder = tflearn.fully_connected(encoder, 80,activation='crelu',regularizer='L2')  
+decoder = tflearn.fully_connected(encoder, int(n_Saida), activation='elu',regularizer='L2')
+net = tflearn.regression(decoder, optimizer='adam', learning_rate=0.006,loss='categorical_crossentropy', metric=None)#categorical_crossentropy
+#model = tflearn.DNN(net)
+model = tflearn.DNN(net, tensorboard_verbose=0, tensorboard_dir="log90-dpel2-2000")
+model.fit(X, Y, n_epoch=2000,run_id="auto_encoder", batch_size=128,shuffle=True, show_metric=False)
+
+
+
+Resultados:
+
+Base1(Locutores conhecidos):
+acertou:  1603 de:  1733
+0.9249855741488748
+
+Base2(Locutores não conhecidos portugues:
+acertou:  557 de:  620
+0.8983870967741936
+
+Base3(Locutores Librespeech):
+acertou:  6260 de:  7887
+0.793711170280208
+
+
+
+# 16k encoder1.py
+Base2(Locutores não conhecidos portugues:
+acertou:  519 de:  620
+0.8370967741935483
+Base1(Locutores conhecidos):
+acertou:  473 de:  534
+0.8857677902621723
+Base3(Locutores Librespeech):
+acertou:  6645 de:  7887
+0.8425256751616584
+
+
+
+
+
+#48k encoder1.py
+Base2(Locutores não conhecidos portugues:
+acertou:  508 de:  620
+0.8193548387096774
+Base1(Locutores conhecidos):
+acertou:  492 de:  534
+0.9213483146067416
+Base3(Locutores Librespeech):
+acertou:  5564 de:  7887
+0.705464688728287
+
+
+
+
+
+#44k encoder1.py
+
+Base2(Locutores não conhecidos portugues:
+acertou:  506 de:  620
+0.8161290322580645
+Base1(Locutores conhecidos):
+acertou:  493 de:  534
+0.9232209737827716
+Base3(Locutores Librespeech):
+acertou:  5739 de:  7887
+0.7276531000380373
+
+
+
+
+#32k encoder1.py
+
+
+
+
+
+
+
